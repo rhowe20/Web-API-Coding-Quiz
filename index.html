@@ -8,8 +8,80 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="alert alert-warning" role="alert">
-        <a href="./High-Scores.html" class="alert-link">View High Scores!</a>
+
+    <div class="alert alert-warning row" role="alert">
+        <div class = 'col'>
+        <a href="./High-Scores.html" class="alert-link" >View High Scores!</a>
+        </div>
+        <div class = 'col'>
+        <p class = 'text-right' id = 'timer'>60</p>
+        </div>
+    </div>
+
+    <div class = 'text-center' id = 'description'>
+        <h1>Ya know, text</h1>
+        <p>blah blah, instructions....</p>
+        <button type="button" class="btn btn-outline-warning" id = "start-button">Start Quiz!</button>
+    </div>
+
+    <div class = 'text-center' style = "display: none;" id = 'question1'>
+        <h1>Commonly used data types DO NOT include:</h1>
+        <button type="button" class="btn btn-outline-warning" id = "strings">strings</button>
+
+        <button type="button" class="btn btn-outline-warning" id = " boolians1">booleans</button>
+
+        <button type="button" class="btn btn-outline-warning" id = "alerts">alerts</button>
+
+        <button type="button" class="btn btn-outline-warning" id = "numbers">numbers</button>
+
+    </div>
+
+    <div class = 'text-center' style = "display: none;" id = 'question2'>
+        <h1>The condition in an if/else statement is enclosed with:</h1>
+        <button type="button" class="btn btn-outline-warning" id = "quotes1">quotes</button>
+
+        <button type="button" class="btn btn-outline-warning" id = "curlyBrackets1">curly brackets</button>
+
+        <button type="button" class="btn btn-outline-warning" id = "parentheses1">parentheses</button>
+
+        <button type="button" class="btn btn-outline-warning" id = "squareBrackets">square brackets</button>
+
+    </div>
+
+    <div class = 'text-center' style = "display: none;" id = 'question3'>
+        <h1>Arrays in JavaScript can be used to store ___:</h1>
+        <button type="button" class="btn btn-outline-warning" id = "numberStrings">numbers and strings</button>
+
+        <button type="button" class="btn btn-outline-warning" id = "otherArr">other arrays</button>
+
+        <button type="button" class="btn btn-outline-warning" id = "booleans2">booleans</button>
+
+        <button type="button" class="btn btn-outline-warning" id = "allAbove">all of the above</button>
+
+    </div>
+
+    <div class = 'text-center' style = "display: none;" id = 'question4'>
+        <h1>String vaules must be enclosed within ____ when being assigned to variables.</h1>
+        <button type="button" class="btn btn-outline-warning" id = "commas">commas</button>
+
+        <button type="button" class="btn btn-outline-warning" id = "curlyBrackets2">curly brackets</button>
+
+        <button type="button" class="btn btn-outline-warning" id = "quotes2">quotes</button>
+
+        <button type="button" class="btn btn-outline-warning" id = "parentheses2">parentheses</button>
+
+    </div>
+
+    <div class = 'text-center' style = "display: none;" id = 'question5'>
+        <h1>A very useful tool used during development and debugging for printing content to the debugger is:</h1>
+        <button type="button" class="btn btn-outline-warning" id = "js">JavaScript</button>
+
+        <button type="button" class="btn btn-outline-warning" id = "terminalBash">terminal/bash</button>
+
+        <button type="button" class="btn btn-outline-warning" id = "loops">for loops</button>
+
+        <button type="button" class="btn btn-outline-warning" id = "consoleLog">console log</button>
+
     </div>
 
     <script src = './script.js'></script>
