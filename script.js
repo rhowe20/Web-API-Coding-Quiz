@@ -1,6 +1,6 @@
 var timeEl = document.querySelector("#timer");
 var buttonEl = document.querySelector('#start-button')
-var q1Answer = document.querySelector('#alerts')
+
 var questions = [{
     question: 'question1',
     choices: ['strings', 'booleans1', 'alerts', 'numbers'],
@@ -31,16 +31,14 @@ function setTime() {
   var timerInterval = setInterval(function() {
     secondsLeft--;
     timeEl.textContent = secondsLeft;
-
     if(secondsLeft === 0) {
       clearInterval(timerInterval);
     }
-
   }, 1000);
 }
-setTime();
 
 buttonEl.addEventListener('click', function(){
+    setTime();
     var startBtn = document.querySelector('#description');
     startBtn.style.display = 'none'
     document.querySelector('#question1').style.display = 'block';
