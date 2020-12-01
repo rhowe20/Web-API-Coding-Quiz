@@ -78,6 +78,7 @@ questArea.addEventListener('click', function(event){
     }
     else{
       qIndex++;
+      secondsLeft = secondsLeft -10
       renderQuestions();
     }
   }
