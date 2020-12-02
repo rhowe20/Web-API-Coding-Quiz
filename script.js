@@ -60,11 +60,12 @@ function setTime() {
 
 yesBttn.addEventListener('click', function(){
   scoreArea.style.display = 'none';
-  scorePage.style.display = 'block';
+  location.href = 'https://rhowe20.github.io/Web-API-Coding-Quiz/high-score.html'
 })
 
 noBttn.addEventListener('click', function(){
-
+  scoreArea.style.display = 'none';
+  location.href = 'https://rhowe20.github.io/Web-API-Coding-Quiz/high-score.html'
 })
 
 // function to switch from question to question
