@@ -4,6 +4,7 @@ var questArea = document.querySelector('#question-area');
 var scoreArea = document.querySelector('#Score-Page');
 var noBttn = document.querySelector('#no');
 var yesBttn = document.querySelector('#yes');
+var buttonSave = document.querySelector('#save')
 var score = 0;
 var qIndex = 0;
 
@@ -109,4 +110,11 @@ questArea.addEventListener('click', function(event){
       renderQuestions();
     }
   }
+})
+
+// JS for high-score html
+
+buttonSave.addEventListener('click', function(){
+  
+
 })
