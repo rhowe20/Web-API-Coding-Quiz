@@ -59,7 +59,8 @@ function setTime() {
 // Yes and no button functions
 
 yesBttn.addEventListener('click', function(){
-  
+  scoreArea.style.display = 'none';
+  scorePage.style.display = 'block';
 })
 
 noBttn.addEventListener('click', function(){
