@@ -6,6 +6,7 @@ var noBttn = document.querySelector('#no');
 var yesBttn = document.querySelector('#yes');
 var userScore = document.querySelector('#prev-scores');
 var userUser = document.querySelector('#prev-user');
+var savebttn = document.getElementById('save');
 var score = 0;
 var qIndex = 0;
 
@@ -130,24 +131,31 @@ yesBttn.addEventListener('click', function(){
 
 noBttn.addEventListener('click', function(){
   scoreArea.style.display = 'none';
+  window.location = 'index.html'
 });
 
-// Display and store score and user
+// Display and store score and user info
 
 function renderPrevScores(){
   var lastScore = localStorage.getItem(score);
   var lastUser = localStorage.getItem('lastUser');
-  userScore.textContent = lastScore
-  userUser.textContent = lastUser
+  userScore.textContent = lastScore;
+  userUser.textContent = lastUser;
+
+  var heldScores = document.querySelector('#held-scores');
+
+  heldScores.append(lastScore);
+  heldScores.append(lastUser);
+
   return;
 }
 
-document.getElementById('save').addEventListener('click', function(event){
+savebttn.addEventListener('click', function(event){
   event.preventDefault();
 
   var userName = document.querySelector('#user-name').value;
 
-  localStorage.setItem('User Name', userName);
-  localStorage.setItem('User score', score);
+  localStorage.setItem(score, score);
+  localStorage.setItem('lastUser', userName);
   renderPrevScores();
-})  
+})
