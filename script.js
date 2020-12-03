@@ -4,7 +4,8 @@ var questArea = document.querySelector('#question-area');
 var scoreArea = document.querySelector('#Score-Page');
 var noBttn = document.querySelector('#no');
 var yesBttn = document.querySelector('#yes');
-var buttonSave = document.querySelector('#save')
+var userScore = document.querySelector('#prev-scores');
+var userUser = document.querySelector('#prev-user');
 var score = 0;
 var qIndex = 0;
 
@@ -35,6 +36,25 @@ var questions = [{
 
 ];
 
+// Display and remove high score form
+
+document.querySelector('#high-score-form').style.display = 'none';
+
+function displayScoreForm(){
+  document.querySelector('#high-score-form').style.display = 'block';
+}
+
+var viewScore = document.querySelector('#view-scores')
+
+viewScore.addEventListener('click', function(event){
+  event.preventDefault();
+
+  document.querySelector('#description').style.display = 'none';
+  document.querySelector('#question-area').style.display = 'none';
+  document.querySelector('#Score-Page').style.display = 'none';
+  displayScoreForm();
+})
+
 // Timer
 var secondsLeft = 75;
 
@@ -44,30 +64,18 @@ function setTime() {
     timeEl.textContent = secondsLeft;
     if(qIndex === questions.length -1){
       clearInterval(timerInterval);
-      alert('Time is up! Your score is ' + score + '/' + questions.length);
+      alert('Good job! ' + score)
       questArea.style.display = 'none';
       scoreArea.style.display = 'block';
     }
     if(secondsLeft === 0) {
       clearInterval(timerInterval);
-      alert('Good job! Your score is ' + score + '/' + questions.length);
+      alert('Time is up! ' + score)
       questArea.style.display = 'none';
       scoreArea.style.display = 'block';
     }
   }, 1000);
 }
-
-// Yes and no button functions
-
-yesBttn.addEventListener('click', function(){
-  scoreArea.style.display = 'none';
-  location.href = 'https://rhowe20.github.io/Web-API-Coding-Quiz/high-score.html'
-})
-
-noBttn.addEventListener('click', function(){
-  scoreArea.style.display = 'none';
-  location.href = 'https://rhowe20.github.io/Web-API-Coding-Quiz/high-score.html'
-})
 
 // function to switch from question to question
 function renderQuestions(){
@@ -77,7 +85,6 @@ function renderQuestions(){
   document.querySelector('#button3').textContent = questions[qIndex].ch[2];
   document.querySelector('#button4').textContent = questions[qIndex].ch[3];
 }
-
 
 // Event listner for buttons
 
@@ -99,12 +106,14 @@ questArea.addEventListener('click', function(event){
   if(event.target.type === 'button'){
     if(event.target.innerText === questions[qIndex].a){
       console.log(true);
+      alert('Correct!');
       score++;
       qIndex++;
       renderQuestions();
     }
     else{
       console.log(false);
+      alert('Wrong!');
       qIndex++;
       secondsLeft = secondsLeft -10;
       renderQuestions();
@@ -112,9 +121,33 @@ questArea.addEventListener('click', function(event){
   }
 })
 
-// JS for high-score html
+// Yes and no button functions
 
-buttonSave.addEventListener('click', function(){
-  
+yesBttn.addEventListener('click', function(){
+  scoreArea.style.display = 'none';
+  document.querySelector('#high-score-form').style.display = 'block'
+});
 
-})
+noBttn.addEventListener('click', function(){
+  scoreArea.style.display = 'none';
+});
+
+// Display and store score and user
+
+function renderPrevScores(){
+  var lastScore = localStorage.getItem(score);
+  var lastUser = localStorage.getItem('lastUser');
+  userScore.textContent = lastScore
+  userUser.textContent = lastUser
+  return;
+}
+
+document.getElementById('save').addEventListener('click', function(event){
+  event.preventDefault();
+
+  var userName = document.querySelector('#user-name').value;
+
+  localStorage.setItem('User Name', userName);
+  localStorage.setItem('User score', score);
+  renderPrevScores();
+})  

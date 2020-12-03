@@ -11,7 +11,8 @@
 
     <div class="alert alert-warning row" role="alert">
         <div class = 'col'>
-        <a href="./high-score.html" class="alert-link">View High Scores!</a>
+        <a href = '' class="alert-link" id = 'view-scores'>View High Scores!</a>
+        <a href = '' class="alert-link pl-4" id = 'view-scores'>Quiz!</a>
         </div>
         <div class = 'col'>
         <p class = 'text-right' id = 'timer'>75</p>
@@ -44,6 +45,28 @@
         <button type="button" class="btn btn-outline-warning choice" id = "no">No</button>
 
     </div>
+
+<div id = 'high-score-form'>
+    <form class="form-inline justify-content-center">
+        <div class="form-group mx-sm-3 mb-2 justify-content-center">
+          <label for="user-name" class="sr-only">User Name</label>
+          <input class="form-control" id="user-name" placeholder="Name">
+        </div>
+        <button id="save" class="btn btn-outline-warning mb-2">Save</button>
+      </form>
+
+    <div class="col pt-4">
+        <div class = 'row justify-content-center'>
+        <div class="card" class="card text-white bg-warning mb-3" style="max-width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Your High Scores!</h5>
+                <p class="card-text" id = 'prev-user'>User:</p>
+                <p class="card-text" id ='prev-scores'>Score:</p>
+            </div>
+        </div>
+        </div>
+     </div>
+</div>
 
     <script src = './script.js'></script>
 </body>
