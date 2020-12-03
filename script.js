@@ -65,13 +65,13 @@ function setTime() {
     timeEl.textContent = secondsLeft;
     if(qIndex === questions.length -1){
       clearInterval(timerInterval);
-      alert('Good job! ' + score)
+      alert('Good job! Your score is ' + score + '/' + questions.length);
       questArea.style.display = 'none';
       scoreArea.style.display = 'block';
     }
     if(secondsLeft === 0) {
       clearInterval(timerInterval);
-      alert('Time is up! ' + score)
+      alert('Time is up! Your score is ' + score + '/' + questions.length);
       questArea.style.display = 'none';
       scoreArea.style.display = 'block';
     }

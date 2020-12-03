@@ -7,25 +7,34 @@ In this project, we were tasked at creating a coding quiz that took the user fro
 Follow the link below to open the webpage for the my portfolio website.
 
 ```bash
-https://rhowe20.github.io/Rebecca-Howe-Portfolio/
+https://rhowe20.github.io/Web-API-Coding-Quiz/
 ```
 
 ## Usage 
 
-Throughout the quiz, the user is prompted to select answers that believe are correct. The first page shows this.
+Throughout the quiz, the user is prompted to select answers that believe are correct. The first page explains the quiz and shows the timer, start button, and allows user to go to the high sore page.
 
-![About Me Page](https://github.com/rhowe20/Rebecca-Howe-Portfolio/blob/main/Images/aboutMe.png) 
+![Main Page](https://github.com/rhowe20/Web-API-Coding-Quiz/blob/main/assets/description_start.png) 
 
-The About Me page explains why I have chosen to create this portfolio and what I would like to do in the future with the skills I am learning.
+Once the user clicks the start button, they are taken to the first question and the timer starts.
 
-![Portfolio Page](https://github.com/rhowe20/Rebecca-Howe-Portfolio/blob/main/Images/portfolio.png)
+![First Question](https://github.com/rhowe20/Web-API-Coding-Quiz/blob/main/assets/question_answer.png)
 
-The Portfolio page shows examples of my work and allows user to get an idea of what I can do. At this time, I am still growing my portfolio. Unfortunately, this means I do not have anything to show as of yet.
+If the answer the user selects is correct, an alert will pop up letting them know. If not, then another alert will pop stating they were incorrect.
 
-![Contact Us Page](https://github.com/rhowe20/Rebecca-Howe-Portfolio/blob/main/Images/contactUs.png) 
+![Correct Answer](https://github.com/rhowe20/Web-API-Coding-Quiz/blob/main/assets/correct_answer.png) 
 
-The Contact Us page allows users to contact me if they want to learn more about what I can do.
+![Incorrect Answer](https://github.com/rhowe20/Web-API-Coding-Quiz/blob/main/assets/wrong_answer.png) 
 
-![Footer](https://github.com/rhowe20/Rebecca-Howe-Portfolio/blob/main/Images/footer.png)
+Once they have completed the quiz, they will be notified of their score and asked if they would like to save their scores to the high score page.
 
-The footer allows user to go to my social media pages. This includes my Linkden, Facebook, and Twitter.
+![Save Score](https://github.com/rhowe20/Web-API-Coding-Quiz/blob/main/assets/save_score.png)
+
+If they answer yes, they are taken to the high score page to submit their score and have it saved on their local storage.
+
+![High Score Page](https://github.com/rhowe20/Web-API-Coding-Quiz/blob/main/assets/highscore_page.png)
+
+
+## Corrections to be made
+
+While this assignment was a challenge and very fun, I am still having trouble grasping certain elements. I was unable to get the local storage information to stay on the page after refreshed. Any feedback would be appreciated. Thank you.
